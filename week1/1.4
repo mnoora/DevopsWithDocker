@@ -1,0 +1,23 @@
+mnoora@fuxi16:~/DevopsWithDocker/week1$ docker run -it -d devopsdockeruh/exec_bash_exercise
+3c36cba01597fb2ea87ecd6809bd289a57664af42036cb9c4102caab5471c006
+mnoora@fuxi16:~/DevopsWithDocker/week1$ docker ps
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS               NAMES
+3c36cba01597        devopsdockeruh/exec_bash_exercise   "node index"        5 seconds ago       Up 4 seconds                            recursing_borg
+mnoora@fuxi16:~/DevopsWithDocker/week1$ docker exec -it 3c36cba01597 /bin/bash
+root@3c36cba01597:/usr/app# tail -f ./logs.txt
+Wed, 10 Apr 2019 14:36:54 GMT
+Secret message is:
+"Docker is easy"
+Wed, 10 Apr 2019 14:37:00 GMT
+Wed, 10 Apr 2019 14:37:03 GMT
+Wed, 10 Apr 2019 14:37:06 GMT
+Wed, 10 Apr 2019 14:37:09 GMT
+Secret message is:
+"Docker is easy"
+Wed, 10 Apr 2019 14:37:15 GMT
+Wed, 10 Apr 2019 14:37:18 GMT
+Wed, 10 Apr 2019 14:37:21 GMT
+Wed, 10 Apr 2019 14:37:24 GMT
+Secret message is:
+"Docker is easy"
+
